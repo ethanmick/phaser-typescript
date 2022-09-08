@@ -3,6 +3,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 
+/** @type { import('webpack').Configuration } */
 module.exports = {
   entry: path.resolve(__dirname, './src/index.ts'), // Absolute path.
   output: {
@@ -57,7 +58,7 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      identifier: 'phaser',
+      Phaser: 'phaser',
     }),
     new HtmlWebpackPlugin({
       // A HTML page that will load that JavaScript bundle as a script.

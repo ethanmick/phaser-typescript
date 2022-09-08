@@ -1,5 +1,3 @@
-import Phaser from 'phaser'
-
 enum IMG {
   SKY = 'sky',
   LOGO = 'logo',
